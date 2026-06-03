@@ -91,15 +91,15 @@ A robust, production-ready **e-commerce backend API** built with **.NET 9** and 
 
 | Module | Endpoints | Description |
 |---|---|---|
-| 🔐 Auth | ~8 | Register, Login, Refresh Token, Revoke, Email Confirm… |
-| 🛍️ Products | ~10 | List, Get, Create, Update, Delete, Filter, Search… |
-| 🗂️ Categories | ~6 | CRUD + nested/parent category support |
-| 🏷️ Brands | ~5 | CRUD + brand product listing |
-| 🛒 Cart | ~6 | Get cart, Add item, Update quantity, Remove item, Clear |
-| ❤️ Wishlist | ~7 | Create, Get, Add item, Remove item, Delete wishlist |
-| 📦 Orders | ~8 | Place order, Get orders, Get by ID, Update status |
-| ⭐ Reviews | ~6 | Add, Get, Update, Delete review per product |
-| 💳 Payments | ~7 | Create session, Confirm, Refund, Payment history |
+| 🔐 Auth | Register, Login, Refresh Token, Revoke, Email Confirm… |
+| 🛍️ Products | List, Get, Create, Update, Delete, Filter, Search… |
+| 🗂️ Categories |CRUD + nested/parent category support |
+| 🏷️ Brands | CRUD + brand product listing |
+| 🛒 Cart | Get cart, Add item, Update quantity, Remove item, Clear |
+| ❤️ Wishlist | Create, Get, Add item, Remove item, Delete wishlist |
+| 📦 Orders | Place order, Get orders, Get by ID, Update status |
+| ⭐ Reviews | Add, Get, Update, Delete review per product |
+| 💳 Payments | Create session, Confirm, Refund, Payment history |
 
 ---
 
@@ -298,24 +298,38 @@ Swagger UI: `https://localhost:5001/swagger`
 ```
 ECommerce/
 ├── ECommerce.sln
-├── ECommerce.Api/
-│   ├── Controllers/
-│   ├── Middleware/          ← Global Exception Handler
-│   └── ECommerce.Api.csproj
-├── ECommerce.Application/
-│   ├── Services/
-│   ├── DTOs/
-│   ├── Mappings/            ← AutoMapper Profiles
-│   └── ECommerce.Application.csproj
-├── ECommerce.Domain/
-│   ├── Entities/
-│   ├── Interfaces/          ← Generic Repository Interface
-│   └── ECommerce.Domain.csproj
-└── ECommerce.Infrastucture/
-    ├── Repositories/        ← Generic Repository Implementation
-    ├── Data/                ← EF Core DbContext & Migrations
-    ├── Services/            ← Stripe, MailKit, Serilog
-    └── ECommerce.Infrastructure.csproj
+│
+├── E-Commerce.Api
+│   ├── Connected Services
+│   ├── Dependencies
+│   ├── Properties
+│   ├── wwwroot
+│   ├── Controllers
+│   ├── log
+│   ├── appsettings.json
+│   ├── E-Commerce.Api.http
+│   └── Program.cs
+│
+├── E-Commerce.Application
+│   ├── Dependencies
+│   ├── DependencyInjection
+│   ├── DTOs
+│   ├── Mapping
+│   └── Services
+│
+├── E-Commerce.Domain
+│   ├── Dependencies
+│   ├── Entities
+│   └── Repositories
+│
+└── E-Commerce.Infrastructure
+    ├── Dependencies
+    ├── Data
+    ├── DependencyInjection
+    ├── MiddleWare
+    ├── Migrations
+    ├── Repositories
+    └── Services
 ```
 
 ---
