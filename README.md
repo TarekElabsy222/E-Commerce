@@ -1,27 +1,105 @@
-<h1 align="center">🛒 ECommerce</h1>
+<h1 align="center">🛒 ECommerce API</h1>
 
 <p align="center">
-  <em>Clean Architecture · ASP.NET Core Web API · .NET 8</em>
+  <em>Clean Architecture · ASP.NET Core Web API · .NET 9 · 73 Endpoints</em>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/.NET_9-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
   <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
   <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" />
   <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" />
   <img src="https://img.shields.io/badge/Entity_Framework-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white" />
+  <img src="https://img.shields.io/badge/AutoMapper-BE4B48?style=for-the-badge&logo=automapper&logoColor=white" />
+  <img src="https://img.shields.io/badge/MailKit-0078D4?style=for-the-badge&logo=maildotru&logoColor=white" />
+  <img src="https://img.shields.io/badge/Serilog-B22222?style=for-the-badge&logo=serilog&logoColor=white" />
+  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" />
+</p>
+
 ---
 
 ## 📖 About
 
-A robust **e-commerce backend API** built with **.NET 8** and **Clean Architecture**. Designed for scalability and maintainability, the solution separates business logic, domain rules, and infrastructure concerns into clearly defined layers.
+A robust, production-ready **e-commerce backend API** built with **.NET 9** and **Clean Architecture**. The API exposes **73 endpoints** covering all e-commerce operations — from product browsing and cart management to payments and order tracking.
 
 - 🏗️ Built on **Clean Architecture** principles
-- ⚡ RESTful API powered by **ASP.NET Core**
-- 🗄️ Data persistence via **Entity Framework Core** & **SQL Server**
-- 🧩 Fully decoupled layers for easy testing and extension
+- ⚡ **73 RESTful endpoints** across all modules
+- 🛡️ JWT Authentication with Refresh Tokens
+- 💳 **Stripe** payment integration
+- 📧 Email notifications via **MailKit**
+- 📋 Structured logging with **Serilog**
+- 🔄 Object mapping with **AutoMapper**
+- ♻️ **Generic Repository** pattern for clean data access
+- 🚨 Global **Exception Handling** middleware
+- 🗄️ **SQL Server** + **Entity Framework Core**
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 🔐 **Authentication & Authorization** | JWT access tokens + refresh token rotation |
+| 🛍️ **Product Management** | CRUD with categories, brands, stock, and discounts |
+| 🛒 **Shopping Cart** | Add, update, remove cart items per user |
+| ❤️ **Wishlist** | Create and manage named wishlists |
+| 📦 **Order Management** | Place orders, track status, manage shipping |
+| 💳 **Stripe Payments** | Secure payment processing via Stripe |
+| ⭐ **Reviews & Ratings** | Customers can rate and review products |
+| 📧 **Email Notifications** | Transactional emails via MailKit (SMTP) |
+| 📋 **Serilog Logging** | Structured, queryable logs with sinks |
+| 🚨 **Global Exception Handling** | Consistent error responses across all endpoints |
+| 🔄 **AutoMapper** | Clean DTO ↔ Entity mappings |
+| ♻️ **Generic Repository** | Reusable, testable data access layer |
+
+---
+
+## 🛠️ Tech Stack
+
+### Languages & Frameworks
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET 9](https://img.shields.io/badge/.NET_9-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+
+### Database & ORM
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Entity Framework](https://img.shields.io/badge/Entity_Framework_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+
+### Libraries & Integrations
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
+![AutoMapper](https://img.shields.io/badge/AutoMapper-BE4B48?style=for-the-badge&logo=automapper&logoColor=white)
+![MailKit](https://img.shields.io/badge/MailKit-0078D4?style=for-the-badge&logo=maildotru&logoColor=white)
+![Serilog](https://img.shields.io/badge/Serilog-B22222?style=for-the-badge&logo=serilog&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
+
+### Tools & Platforms
+![Visual Studio](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+---
+
+## 🗺️ API Endpoints Overview
+
+> **73 endpoints** across 9 modules
+
+| Module | Endpoints | Description |
+|---|---|---|
+| 🔐 Auth | ~8 | Register, Login, Refresh Token, Revoke, Email Confirm… |
+| 🛍️ Products | ~10 | List, Get, Create, Update, Delete, Filter, Search… |
+| 🗂️ Categories | ~6 | CRUD + nested/parent category support |
+| 🏷️ Brands | ~5 | CRUD + brand product listing |
+| 🛒 Cart | ~6 | Get cart, Add item, Update quantity, Remove item, Clear |
+| ❤️ Wishlist | ~7 | Create, Get, Add item, Remove item, Delete wishlist |
+| 📦 Orders | ~8 | Place order, Get orders, Get by ID, Update status |
+| ⭐ Reviews | ~6 | Add, Get, Update, Delete review per product |
+| 💳 Payments | ~7 | Create session, Confirm, Refund, Payment history |
 
 ---
 
@@ -35,28 +113,120 @@ ECommerce.Api  ──►  ECommerce.Application  ──►  ECommerce.Domain
 
 | Layer | Responsibility |
 |---|---|
-| **Api** | HTTP entry point — controllers, middleware, routing |
-| **Application** | Use cases, business logic, DTOs, service interfaces |
+| **Api** | HTTP entry point — controllers, middleware, routing, exception handler |
+| **Application** | Use cases, business logic, DTOs, AutoMapper profiles, service interfaces |
 | **Domain** | Core entities, value objects, domain rules (no dependencies) |
-| **Infrastructure** | EF Core, repositories, external services, DB migrations |
+| **Infrastructure** | EF Core, generic repository, Serilog, MailKit, Stripe, migrations |
 
 ---
 
-## 🛠️ Tech Stack
+## 🗄️ Database Design
 
-### Languages & Frameworks
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+```mermaid
+erDiagram
+  APPLICATION_USER {
+    Guid Id PK
+    string FirstName
+    string LastName
+    string Email UK
+    string PasswordHash
+    string Address
+  }
+  REFRESH_TOKEN {
+    string Token
+    datetime ExpiresOn
+    datetime CreatedOn
+    datetime RevokedOn
+    Guid UserId FK
+  }
+  PRODUCT {
+    Guid Id PK
+    string Name
+    decimal Price
+    int StockAmount
+    decimal DiscountPercentage
+    Guid CategoryId FK
+    Guid BrandId FK
+  }
+  CATEGORY {
+    Guid Id PK
+    string Name
+    Guid ParentCategoryId FK
+  }
+  BRAND {
+    Guid Id PK
+    string Name
+    string Email
+    string Phone
+  }
+  ORDER {
+    Guid Id PK
+    datetime Date
+    string Status
+    string ShippingAddress
+    double ShippingCost
+    Guid CustomerId FK
+  }
+  ORDER_ITEMS {
+    Guid Id PK
+    int Quantity
+    double TotalPrice
+    double Discount
+    Guid OrderId FK
+    Guid ProductId FK
+  }
+  CART {
+    Guid Id PK
+    Guid CustomerId FK
+  }
+  CART_ITEMS {
+    Guid Id PK
+    int Quantity
+    Guid CartId FK
+    Guid ProductId FK
+  }
+  WISHLIST {
+    Guid Id PK
+    string Name
+    Guid CustomerId FK
+  }
+  WISHLIST_ITEMS {
+    Guid Id PK
+    Guid WishlistId FK
+    Guid ProductId FK
+  }
+  REVIEW {
+    Guid Id PK
+    int Rate
+    string Comment
+    Guid CustomerId FK
+    Guid ProductId FK
+  }
+  PAYMENT {
+    Guid Id PK
+    string Method
+    string Currency
+    double Amount
+    Guid CustomerId FK
+  }
 
-### Database & ORM
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
-![Entity Framework](https://img.shields.io/badge/Entity_Framework-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-
-### Tools & Platforms
-![Visual Studio](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+  APPLICATION_USER ||--o{ REFRESH_TOKEN : "has"
+  APPLICATION_USER ||--o{ ORDER : "places"
+  APPLICATION_USER ||--o{ CART : "owns"
+  APPLICATION_USER ||--o{ WISHLIST : "owns"
+  APPLICATION_USER ||--o{ REVIEW : "writes"
+  APPLICATION_USER ||--o{ PAYMENT : "makes"
+  CATEGORY ||--o{ PRODUCT : "contains"
+  CATEGORY ||--o| CATEGORY : "parent of"
+  BRAND ||--o{ PRODUCT : "owns"
+  ORDER ||--o{ ORDER_ITEMS : "has"
+  PRODUCT ||--o{ ORDER_ITEMS : "in"
+  CART ||--o{ CART_ITEMS : "has"
+  PRODUCT ||--o{ CART_ITEMS : "in"
+  WISHLIST ||--o{ WISHLIST_ITEMS : "has"
+  PRODUCT ||--o{ WISHLIST_ITEMS : "in"
+  PRODUCT ||--o{ REVIEW : "has"
+```
 
 ---
 
@@ -64,8 +234,10 @@ ECommerce.Api  ──►  ECommerce.Application  ──►  ECommerce.Domain
 
 ### Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download)
 - SQL Server (local or remote)
+- Stripe account (for payment keys)
+- SMTP credentials (for MailKit)
 - Visual Studio 2022 (v17.13+) or VS Code
 
 ### 1. Clone the repository
@@ -75,14 +247,32 @@ git clone https://github.com/TarekElabsy222/ECommerce.git
 cd ECommerce
 ```
 
-### 2. Configure the connection string
-
-Edit `ECommerce.Api/appsettings.json`:
+### 2. Configure `appsettings.json`
 
 ```json
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=.;Database=ECommerceDb;Trusted_Connection=True;"
+  },
+  "JWT": {
+    "Key": "your-secret-key",
+    "Issuer": "ECommerceApi",
+    "Audience": "ECommerceClient",
+    "DurationInDays": 1
+  },
+  "Stripe": {
+    "SecretKey": "sk_test_...",
+    "PublishableKey": "pk_test_..."
+  },
+  "MailSettings": {
+    "Host": "smtp.your-provider.com",
+    "Port": 587,
+    "Email": "your@email.com",
+    "Password": "your-password",
+    "DisplayName": "ECommerce"
+  },
+  "Serilog": {
+    "MinimumLevel": "Information"
   }
 }
 ```
@@ -99,7 +289,7 @@ dotnet ef database update --project ECommerce.Infrastucture --startup-project EC
 dotnet run --project ECommerce.Api
 ```
 
-The API will be available at `https://localhost:5001`
+Swagger UI: `https://localhost:5001/swagger`
 
 ---
 
@@ -109,12 +299,22 @@ The API will be available at `https://localhost:5001`
 ECommerce/
 ├── ECommerce.sln
 ├── ECommerce.Api/
+│   ├── Controllers/
+│   ├── Middleware/          ← Global Exception Handler
 │   └── ECommerce.Api.csproj
 ├── ECommerce.Application/
+│   ├── Services/
+│   ├── DTOs/
+│   ├── Mappings/            ← AutoMapper Profiles
 │   └── ECommerce.Application.csproj
 ├── ECommerce.Domain/
+│   ├── Entities/
+│   ├── Interfaces/          ← Generic Repository Interface
 │   └── ECommerce.Domain.csproj
 └── ECommerce.Infrastucture/
+    ├── Repositories/        ← Generic Repository Implementation
+    ├── Data/                ← EF Core DbContext & Migrations
+    ├── Services/            ← Stripe, MailKit, Serilog
     └── ECommerce.Infrastructure.csproj
 ```
 
